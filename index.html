@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bar Ventura — DevOps & Full-Stack Engineer</title>
+  <meta name="description" content="Portfolio of Bar Ventura — DevOps Team Leader & Full-Stack Engineer. Kubernetes, GCP, Terraform, GitLab CI/CD, AI platforms, Vue, React, Spring.">
+  <meta property="og:title" content="Bar Ventura — DevOps & Full-Stack Engineer">
+  <meta property="og:description" content="DevOps Team Leader managing multi-cluster architectures, automation pipelines and AI platforms. Full-stack developer. Explore my portfolio — IDE included.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://ventura-bar.github.io/assets/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Bar Ventura — DevOps & Full-Stack Engineer">
+  <meta name="twitter:image" content="https://ventura-bar.github.io/assets/og-image.png">
+  <meta name="theme-color" content="#1e1e1e">
+  <link rel="canonical" href="https://ventura-bar.github.io/">
+  <meta property="og:url" content="https://ventura-bar.github.io/">
+  <script>
+    /* apply saved theme before first paint to avoid a flash */
+    (function () { try { var t = localStorage.getItem("theme"); if (t) document.documentElement.setAttribute("data-theme", t); } catch (e) {} })();
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Bar Ventura",
+    "jobTitle": "DevOps Team Leader & Full-Stack Engineer",
+    "email": "mailto:barven.dev@gmail.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "Rehovot", "addressCountry": "IL" },
+    "alumniOf": "College of Management Academic Studies",
+    "knowsAbout": ["Kubernetes", "OpenShift", "Google Cloud Platform", "Terraform", "Ansible", "ArgoCD", "GitLab CI/CD", "AI Platforms", "RAG Architecture", "Vue.js", "React", "Java Spring", "Python"]
+  }
+  </script>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ░░ Title bar ░░ -->
+  <header class="titlebar">
+    <div class="traffic" aria-hidden="true">
+      <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+    </div>
+    <div class="titlebar-title">README.md — bar-ventura — portfolio</div>
+    <button class="titlebar-search" data-action="palette" title="Go to file (Ctrl/Cmd+Shift+P)">
+      <svg viewBox="0 0 16 16" width="13" height="13"><circle cx="7" cy="7" r="4.5" fill="none" stroke="currentColor" stroke-width="1.4"/><line x1="10.5" y1="10.5" x2="14" y2="14" stroke="currentColor" stroke-width="1.4"/></svg>
+      <span>bar-ventura</span>
+    </button>
+  </header>
+
+  <div class="workbench">
+
+    <!-- ░░ Activity bar ░░ -->
+    <nav class="activitybar" aria-label="Primary">
+      <button class="ab-btn active" data-action="toggle-sidebar" title="Explorer — browse my files">
+        <svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M14.5 3.5h-8a1 1 0 0 0-1 1v15a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1V7.5l-4-4z"/><path fill="none" stroke="currentColor" stroke-width="1.6" d="M14 3.5V8h4.5"/></svg>
+      </button>
+      <button class="ab-btn" data-action="palette" title="Search — go to anything (Ctrl/Cmd+Shift+P)">
+        <svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6" fill="none" stroke="currentColor" stroke-width="1.8"/><line x1="15" y1="15" x2="20.5" y2="20.5" stroke="currentColor" stroke-width="1.8"/></svg>
+      </button>
+      <button class="ab-btn" data-action="open-file" data-file="experience" title="Source Control — my history (experience.yaml)">
+        <svg viewBox="0 0 24 24"><circle cx="7" cy="6" r="2.4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="7" cy="18" r="2.4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17" cy="9" r="2.4" fill="none" stroke="currentColor" stroke-width="1.6"/><path fill="none" stroke="currentColor" stroke-width="1.6" d="M7 8.4v7.2M17 11.4c0 3.5-6 2.5-9 4.5"/></svg>
+      </button>
+      <button class="ab-btn" data-action="open-file" data-file="skills" title="Extensions — my skills">
+        <svg viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="7" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="13" y="4" width="7" height="7" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="4" y="13" width="7" height="7" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="14.5" y="14.5" width="6" height="6" transform="rotate(45 17.5 17.5)" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+      </button>
+      <button class="ab-btn" data-action="toggle-terminal" title="Terminal (Ctrl+`)">
+        <svg viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="15" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path fill="none" stroke="currentColor" stroke-width="1.6" d="M7 9.5l3.5 3L7 15.5"/><line x1="12.5" y1="15.5" x2="17" y2="15.5" stroke="currentColor" stroke-width="1.6"/></svg>
+      </button>
+      <div class="ab-spacer"></div>
+      <a class="ab-btn" href="mailto:barven.dev@gmail.com" title="Contact me — copies my email">
+        <svg viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path fill="none" stroke="currentColor" stroke-width="1.6" d="M4 7l8 6 8-6"/></svg>
+      </a>
+      <button class="ab-btn" data-action="theme-menu" title="Manage — change color theme">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path fill="none" stroke="currentColor" stroke-width="1.6" d="M12 2.8v3M12 18.2v3M2.8 12h3M18.2 12h3M5.5 5.5l2.1 2.1M16.4 16.4l2.1 2.1M18.5 5.5l-2.1 2.1M7.6 16.4l-2.1 2.1"/></svg>
+      </button>
+    </nav>
+
+    <!-- ░░ Sidebar / Explorer ░░ -->
+    <aside class="sidebar" id="sidebar" aria-label="Explorer">
+      <div class="sidebar-title">Explorer</div>
+      <div class="folder-row"><span class="chev">▾</span> bar-ventura</div>
+      <ul class="filetree" role="list">
+        <li><button class="file active" data-file="readme"><span class="ficon ext-md">M</span>README.md</button></li>
+        <li><button class="file" data-file="experience"><span class="ficon ext-yml">Y</span>experience.yaml</button></li>
+        <li><button class="file" data-file="skills"><span class="ficon ext-view-icon">⊞</span>Skills</button></li>
+        <li><button class="file" data-file="education"><span class="ficon ext-md">M</span>education.md</button></li>
+        <li><button class="file" data-file="contact"><span class="ficon ext-sh">$</span>contact.sh</button></li>
+      </ul>
+      <div class="sidebar-hint">
+        <p>psst — try the terminal<br>(<kbd>Ctrl</kbd>+<kbd>`</kbd>) and run <code>help</code></p>
+      </div>
+    </aside>
+
+    <!-- ░░ Editor group ░░ -->
+    <main class="editor-group">
+
+      <div class="tabs" id="tabs" role="tablist" aria-label="Open files">
+        <button class="tab active" role="tab" aria-selected="true" data-file="readme"><span class="ficon ext-md">M</span>README.md<span class="tab-close" title="Close">×</span></button>
+        <button class="tab" role="tab" aria-selected="false" data-file="experience"><span class="ficon ext-yml">Y</span>experience.yaml<span class="tab-close" title="Close">×</span></button>
+        <button class="tab" role="tab" aria-selected="false" data-file="skills"><span class="ficon ext-view-icon">⊞</span>Extensions: Skills<span class="tab-close" title="Close">×</span></button>
+        <button class="tab" role="tab" aria-selected="false" data-file="education"><span class="ficon ext-md">M</span>education.md<span class="tab-close" title="Close">×</span></button>
+        <button class="tab" role="tab" aria-selected="false" data-file="contact"><span class="ficon ext-sh">$</span>contact.sh<span class="tab-close" title="Close">×</span></button>
+      </div>
+
+      <div class="breadcrumbs" id="breadcrumbs">bar-ventura <span class="crumb-sep">›</span> <span id="crumbFile">README.md</span></div>
+
+      <div class="editor" id="editor">
+
+        <div class="print-header" id="printHeader" aria-hidden="true"></div>
+
+        <noscript>
+          <div class="noscript-note">
+            <p><strong>Bar Ventura</strong> — DevOps &amp; Full-Stack Engineer · Rehovot, Israel</p>
+            <p>This site needs JavaScript for the full IDE experience. The short version:
+               <a href="mailto:barven.dev@gmail.com">barven.dev@gmail.com</a> ·
+               <a href="assets/Bar-Ventura-Resume.pdf" download>download my resume (PDF)</a></p>
+          </div>
+        </noscript>
+
+        <!-- section bodies are rendered from js/content.js by js/render.js -->
+        <section class="editor-section active" id="readme" data-name="README.md" data-lang="Markdown"></section>
+        <section class="editor-section" id="experience" data-name="experience.yaml" data-lang="YAML"></section>
+        <section class="editor-section" id="skills" data-name="Extensions: Skills" data-cli="skills" data-lang="Extension Pack"></section>
+        <section class="editor-section" id="education" data-name="education.md" data-lang="Markdown"></section>
+        <section class="editor-section" id="contact" data-name="contact.sh" data-lang="Shell Script"></section>
+
+        <!-- empty state when every tab is closed -->
+        <section class="editor-section empty-state" id="empty-state" aria-hidden="true">
+          <div class="watermark">
+            <p>All tabs closed — just like a clean desk.</p>
+            <p><kbd>Ctrl/Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> &nbsp;go to file</p>
+            <p><kbd>Ctrl</kbd>+<kbd>`</kbd> &nbsp;open terminal</p>
+            <p>…or pick a file from the Explorer.</p>
+          </div>
+        </section>
+      </div>
+
+      <!-- ░░ Terminal panel ░░ -->
+      <div class="terminal" id="terminal" hidden>
+        <div class="term-header">
+          <span class="term-tab dim">PROBLEMS <span class="badge">0</span></span>
+          <span class="term-tab dim">OUTPUT</span>
+          <span class="term-tab active">TERMINAL</span>
+          <button class="term-close" data-action="toggle-terminal" title="Close panel">×</button>
+        </div>
+        <div class="term-body" id="termBody">
+          <div class="term-out" id="termOut"><div class="term-line-out">Welcome! Type <span class="t-cmd">help</span> to see what I respond to.</div></div>
+          <div class="term-input-row">
+            <span class="t-prompt">bar@portfolio<span class="t-dim">:</span><span class="t-path">~</span><span class="t-dim">$</span></span>
+            <input id="termIn" type="text" autocomplete="off" spellcheck="false" aria-label="Terminal input">
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- ░░ Status bar ░░ -->
+  <footer class="statusbar">
+    <div class="sb-left">
+      <span class="sb-item"><svg viewBox="0 0 16 16" width="12" height="12"><circle cx="5" cy="4" r="1.8" fill="none" stroke="currentColor" stroke-width="1.2"/><circle cx="5" cy="12" r="1.8" fill="none" stroke="currentColor" stroke-width="1.2"/><circle cx="11.5" cy="6" r="1.8" fill="none" stroke="currentColor" stroke-width="1.2"/><path fill="none" stroke="currentColor" stroke-width="1.2" d="M5 5.8v4.4M11.5 7.8c0 2.4-4 1.7-6 3"/></svg> main</span>
+      <span class="sb-item">✓ 0 ⚠ 0</span>
+    </div>
+    <div class="sb-right">
+      <a class="sb-item sb-status" href="mailto:barven.dev@gmail.com" title="Copies my email to your clipboard">🟢 Open to opportunities</a>
+      <a class="sb-item sb-hide-sm" href="assets/Bar-Ventura-Resume.pdf" download title="Download my resume (PDF)">⤓ resume.pdf</a>
+      <span class="sb-item sb-hide-sm">Ln 1, Col 1</span>
+      <span class="sb-item sb-hide-sm">UTF-8</span>
+      <span class="sb-item" id="sbLang">Markdown</span>
+      <span class="sb-item">☻</span>
+    </div>
+  </footer>
+
+  <!-- ░░ Notification toast ░░ -->
+  <div class="toast" id="toast" hidden role="status">
+    <span class="toast-icon">✓</span>
+    <span class="toast-msg" id="toastMsg">Email copied to clipboard</span>
+    <a class="toast-link" href="https://mail.google.com/mail/?view=cm&amp;fm=1&amp;to=barven.dev@gmail.com" target="_blank" rel="noopener">Open in Gmail</a>
+    <button class="toast-close" id="toastClose" title="Dismiss">×</button>
+  </div>
+
+  <!-- ░░ Theme quick pick ░░ -->
+  <div class="palette-overlay" id="themeOverlay" hidden>
+    <div class="palette" role="dialog" aria-label="Select color theme">
+      <div class="palette-caption">Select Color Theme</div>
+      <ul class="palette-list" id="themeList" role="listbox">
+        <li role="option" data-theme="dark-plus"><span class="theme-dot" style="background:#1e1e1e"></span>Dark+ <span class="pal-hint">default</span></li>
+        <li role="option" data-theme="light-plus"><span class="theme-dot" style="background:#ffffff"></span>Light+</li>
+        <li role="option" data-theme="monokai"><span class="theme-dot" style="background:#272822"></span>Monokai</li>
+        <li role="option" data-theme="github-dark"><span class="theme-dot" style="background:#0d1117"></span>GitHub Dark</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ░░ Command palette ░░ -->
+  <div class="palette-overlay" id="paletteOverlay" hidden>
+    <div class="palette" role="dialog" aria-label="Command palette">
+      <input id="paletteInput" type="text" placeholder="Type to search files & commands…" autocomplete="off" spellcheck="false">
+      <ul class="palette-list" id="paletteList" role="listbox">
+        <li role="option" data-open="readme"><span class="ficon ext-md">M</span>README.md <span class="pal-hint">about me</span></li>
+        <li role="option" data-open="experience"><span class="ficon ext-yml">Y</span>experience.yaml <span class="pal-hint">work experience</span></li>
+        <li role="option" data-open="skills"><span class="ficon ext-view-icon">⊞</span>Extensions: Skills <span class="pal-hint">tech stack</span></li>
+        <li role="option" data-open="education"><span class="ficon ext-md">M</span>education.md <span class="pal-hint">degrees &amp; certs</span></li>
+        <li role="option" data-open="contact"><span class="ficon ext-sh">$</span>contact.sh <span class="pal-hint">get in touch</span></li>
+        <li role="option" data-cmd="terminal"><span class="ficon ext-cmd">&gt;</span>Toggle Terminal <span class="pal-hint">Ctrl+`</span></li>
+        <li role="option" data-cmd="email"><span class="ficon ext-cmd">&gt;</span>Contact: Copy Email Address <span class="pal-hint">barven.dev@gmail.com</span></li>
+        <li role="option" data-cmd="theme"><span class="ficon ext-cmd">&gt;</span>Preferences: Color Theme <span class="pal-hint">4 themes</span></li>
+        <li role="option" data-cmd="resume"><span class="ficon ext-cmd">&gt;</span>Download Resume <span class="pal-hint">PDF</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="js/content.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,8 +1,10 @@
-/* ═══════════════════════════════════════════════════════════
+/* ═══════════════════════════════════════════════════════════════════
    ✏️  EDIT ME — all the site's content lives in this one file.
-   Change anything below, save, refresh the browser. That's it.
-   (Keep the structure: quotes around text, commas between items.)
-   ═══════════════════════════════════════════════════════════ */
+   Change anything below, save, and refresh. That's it.
+
+   Also remember to update the <head> meta tags in index.html
+   (title, og:description, og:image) to match what you put here.
+   ═══════════════════════════════════════════════════════════════════ */
 
 window.PORTFOLIO = {
   name: "Bar Ventura",
@@ -11,6 +13,11 @@ window.PORTFOLIO = {
   location: "Rehovot, Israel",
   status: "🟢 Open to opportunities",
   resumePdf: "assets/Bar-Ventura-Resume.pdf",
+
+  /* your deployed URL — used for canonical & og:url meta tags */
+  siteUrl: "https://ventura-bar.github.io/",
+  /* og:image — relative path or full URL */
+  ogImage: "assets/og-image.png",
 
   /* add your URLs here — they appear automatically in contact.sh */
   socials: {
@@ -29,18 +36,18 @@ window.PORTFOLIO = {
 
   /* README bullet points — **text** renders bold */
   highlights: [
-    "🧭 Leading a team of **12 engineers** (dev, QA & DevOps) at Mamram, IDF",
+    "🧭 Leading a team of **12 engineers** (dev, QA & DevOps)",
     "🤖 Architected internal **AI platforms** & automation pipelines that cut manual ops overhead",
     "☸️ Orchestrated **multi-cluster migrations** & disaster-recovery with **zero data loss**",
     "🎓 Mentored **hundreds of students** as a core programming instructor",
-    "🥋 Black-belt Jiu-Jitsu instructor — 5 years of volunteering, ages 4 to 50",
+    "🥋 Black-belt Jiu-Jitsu instructor — 5 years of volunteering, ages 4 to 15",
   ],
 
   /* experience.yaml — newest first. `note` is an optional yaml comment. */
   experience: [
     {
       title: "DevOps Team Leader",
-      company: "Mamram, IDF",
+      company: "",
       period: "Jan 2024 → present",
       highlights: [
         "Led a team of **12 developers, QA & DevOps engineers** managing an enterprise-grade, developer-facing SaaS platform (GitLab, Artifactory, Jira, QlikSense, Matomo)",
@@ -52,15 +59,15 @@ window.PORTFOLIO = {
     },
     {
       title: "Fullstack Developer",
-      company: "Basmach, IDF",
+      company: "",
       period: "Feb 2023 → Sep 2023",
       highlights: [
         "Core fullstack developer on the internal management systems supporting the academy's training programs",
       ],
     },
     {
-      title: "Programming Course Instructor",
-      company: "Basmach, IDF",
+      title: "Development Course Instructor",
+      company: "",
       period: "Jul 2021 → Feb 2023",
       highlights: [
         "Core instructor for intensive technical training programs",
@@ -74,7 +81,7 @@ window.PORTFOLIO = {
       period: "2017 → 2021",
       note: "volunteer",
       highlights: [
-        "5 years of voluntary service as a certified Dennis Survival Jiu-Jitsu instructor (**black belt**), managing and training diverse groups from ages 4 to 50",
+        "5 years of voluntary service as a certified Dennis Survival Jiu-Jitsu instructor (**black belt**), managing and training diverse groups from ages 4 to 15",
       ],
     },
   ],
@@ -97,19 +104,26 @@ window.PORTFOLIO = {
       items: ["PostgreSQL", "MongoDB", "Redis", "MariaDB"] },
     { icon: "📈", pack: "Observability", pub: "if it moves, it's monitored",
       items: ["Splunk", "Loki", "Grafana", "Tempo", "Mimir"] },
-    { icon: "🧭", pack: "Leadership & Mentoring", pub: "IDF officer training · LTL certified",
+    { icon: "🧭", pack: "Leadership & Mentoring", pub: "Officer training · LTL certified",
       items: ["Team leadership (12 engineers)", "Instruction", "Mentoring", "Working under pressure"] },
   ],
 
   /* education.md */
   education: [
     { degree: "B.Sc. Computer Science", org: "College of Management Academic Studies", period: "Jan 2024 – Jan 2027 · ongoing" },
-    { degree: "IDF Team Leadership Course (LTL)", org: "Leadership & Team Leadership Certification", period: "Jan 2025" },
+    { degree: "Team Leadership Course (LTL)", org: "Leadership & Team Leadership Certification", period: "Jan 2025" },
     { degree: "Practical Software Engineering — Technician Degree", org: "ORT Rehovot", period: "Jan 2020 – Jan 2021" },
-    { degree: "Programming Course", org: "Basmach, IDF", period: "Jan 2021 – May 2021" },
+    { degree: "Full-Stack Development Course Bootcamp", org: "", period: "Jan 2021 – May 2021" },
   ],
   highschool: {
     title: "🏫 High school — extended STEM track (2020)",
-    note: "5 units each: Computer Science · Android Development · Physics · Mathematics · English",
+    note: [
+      "**5 units each:**",
+      "💻 Computer Science",
+      "📱 Android Development",
+      "🔬 Physics",
+      "📐 Mathematics",
+      "📚 English",
+    ],
   },
 };

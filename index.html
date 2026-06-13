@@ -3,22 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bar Ventura — DevOps & Full-Stack Engineer</title>
-  <meta name="description" content="Portfolio of Bar Ventura — DevOps Team Leader & Full-Stack Engineer. Kubernetes, GCP, Terraform, GitLab CI/CD, AI platforms, Vue, React, Spring.">
-  <meta property="og:title" content="Bar Ventura — DevOps & Full-Stack Engineer">
+
+  <title>Bar Ventura — DevOps &amp; Full-Stack Engineer</title>
+  <meta name="description" content="Portfolio of Bar Ventura — DevOps Team Leader &amp; Full-Stack Engineer. Kubernetes, GCP, Terraform, GitLab CI/CD, AI platforms, Vue, React, Spring.">
+  <meta property="og:title"       content="Bar Ventura — DevOps &amp; Full-Stack Engineer">
   <meta property="og:description" content="DevOps Team Leader managing multi-cluster architectures, automation pipelines and AI platforms. Full-stack developer. Explore my portfolio — IDE included.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://ventura-bar.github.io/assets/og-image.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Bar Ventura — DevOps & Full-Stack Engineer">
-  <meta name="twitter:image" content="https://ventura-bar.github.io/assets/og-image.png">
-  <meta name="theme-color" content="#1e1e1e">
+  <meta property="og:type"        content="website">
+  <meta property="og:image"       content="https://ventura-bar.github.io/assets/og-image.png">
+  <meta property="og:url"         content="https://ventura-bar.github.io/">
+  <meta name="twitter:card"       content="summary_large_image">
+  <meta name="twitter:title"      content="Bar Ventura — DevOps &amp; Full-Stack Engineer">
+  <meta name="twitter:image"      content="https://ventura-bar.github.io/assets/og-image.png">
+  <meta name="theme-color"        content="#1e1e1e">
   <link rel="canonical" href="https://ventura-bar.github.io/">
-  <meta property="og:url" content="https://ventura-bar.github.io/">
-  <script>
-    /* apply saved theme before first paint to avoid a flash */
-    (function () { try { var t = localStorage.getItem("theme"); if (t) document.documentElement.setAttribute("data-theme", t); } catch (e) {} })();
-  </script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -31,6 +28,17 @@
     "knowsAbout": ["Kubernetes", "OpenShift", "Google Cloud Platform", "Terraform", "Ansible", "ArgoCD", "GitLab CI/CD", "AI Platforms", "RAG Architecture", "Vue.js", "React", "Java Spring", "Python"]
   }
   </script>
+
+  <script>
+    /* apply saved theme before first paint to avoid a flash */
+    (function () {
+      try {
+        var t = localStorage.getItem("theme");
+        if (t) document.documentElement.setAttribute("data-theme", t);
+      } catch (_) {}
+    })();
+  </script>
+
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -68,7 +76,7 @@
         <svg viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="15" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path fill="none" stroke="currentColor" stroke-width="1.6" d="M7 9.5l3.5 3L7 15.5"/><line x1="12.5" y1="15.5" x2="17" y2="15.5" stroke="currentColor" stroke-width="1.6"/></svg>
       </button>
       <div class="ab-spacer"></div>
-      <a class="ab-btn" href="mailto:barven.dev@gmail.com" title="Contact me — copies my email">
+      <a id="abMailBtn" class="ab-btn" href="mailto:barven.dev@gmail.com" title="Contact me — copies my email">
         <svg viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path fill="none" stroke="currentColor" stroke-width="1.6" d="M4 7l8 6 8-6"/></svg>
       </a>
       <button class="ab-btn" data-action="theme-menu" title="Manage — change color theme">
@@ -96,11 +104,11 @@
     <main class="editor-group">
 
       <div class="tabs" id="tabs" role="tablist" aria-label="Open files">
-        <button class="tab active" role="tab" aria-selected="true" data-file="readme"><span class="ficon ext-md">M</span>README.md<span class="tab-close" title="Close">×</span></button>
-        <button class="tab" role="tab" aria-selected="false" data-file="experience"><span class="ficon ext-yml">Y</span>experience.yaml<span class="tab-close" title="Close">×</span></button>
-        <button class="tab" role="tab" aria-selected="false" data-file="skills"><span class="ficon ext-view-icon">⊞</span>Extensions: Skills<span class="tab-close" title="Close">×</span></button>
-        <button class="tab" role="tab" aria-selected="false" data-file="education"><span class="ficon ext-md">M</span>education.md<span class="tab-close" title="Close">×</span></button>
-        <button class="tab" role="tab" aria-selected="false" data-file="contact"><span class="ficon ext-sh">$</span>contact.sh<span class="tab-close" title="Close">×</span></button>
+        <button class="tab active" role="tab" aria-selected="true"  data-file="readme"><span class="ficon ext-md">M</span>README.md<span class="tab-close" title="Close">×</span></button>
+        <button class="tab"        role="tab" aria-selected="false" data-file="experience"><span class="ficon ext-yml">Y</span>experience.yaml<span class="tab-close" title="Close">×</span></button>
+        <button class="tab"        role="tab" aria-selected="false" data-file="skills"><span class="ficon ext-view-icon">⊞</span>Extensions: Skills<span class="tab-close" title="Close">×</span></button>
+        <button class="tab"        role="tab" aria-selected="false" data-file="education"><span class="ficon ext-md">M</span>education.md<span class="tab-close" title="Close">×</span></button>
+        <button class="tab"        role="tab" aria-selected="false" data-file="contact"><span class="ficon ext-sh">$</span>contact.sh<span class="tab-close" title="Close">×</span></button>
       </div>
 
       <div class="breadcrumbs" id="breadcrumbs">bar-ventura <span class="crumb-sep">›</span> <span id="crumbFile">README.md</span></div>
@@ -119,11 +127,11 @@
         </noscript>
 
         <!-- section bodies are rendered from js/content.js by js/render.js -->
-        <section class="editor-section active" id="readme" data-name="README.md" data-lang="Markdown"></section>
-        <section class="editor-section" id="experience" data-name="experience.yaml" data-lang="YAML"></section>
-        <section class="editor-section" id="skills" data-name="Extensions: Skills" data-cli="skills" data-lang="Extension Pack"></section>
-        <section class="editor-section" id="education" data-name="education.md" data-lang="Markdown"></section>
-        <section class="editor-section" id="contact" data-name="contact.sh" data-lang="Shell Script"></section>
+        <section class="editor-section active" id="readme"     data-name="README.md"          data-lang="Markdown"></section>
+        <section class="editor-section"        id="experience" data-name="experience.yaml"     data-lang="YAML"></section>
+        <section class="editor-section"        id="skills"     data-name="Extensions: Skills"  data-cli="skills" data-lang="Extension Pack"></section>
+        <section class="editor-section"        id="education"  data-name="education.md"        data-lang="Markdown"></section>
+        <section class="editor-section"        id="contact"    data-name="contact.sh"          data-lang="Shell Script"></section>
 
         <!-- empty state when every tab is closed -->
         <section class="editor-section empty-state" id="empty-state" aria-hidden="true">
@@ -145,7 +153,9 @@
           <button class="term-close" data-action="toggle-terminal" title="Close panel">×</button>
         </div>
         <div class="term-body" id="termBody">
-          <div class="term-out" id="termOut"><div class="term-line-out">Welcome! Type <span class="t-cmd">help</span> to see what I respond to.</div></div>
+          <div class="term-out" id="termOut">
+            <div class="term-line-out">Welcome! Type <span class="t-cmd">help</span> to see what I respond to.</div>
+          </div>
           <div class="term-input-row">
             <span class="t-prompt">bar@portfolio<span class="t-dim">:</span><span class="t-path">~</span><span class="t-dim">$</span></span>
             <input id="termIn" type="text" autocomplete="off" spellcheck="false" aria-label="Terminal input">
@@ -163,7 +173,7 @@
     </div>
     <div class="sb-right">
       <a class="sb-item sb-status" href="mailto:barven.dev@gmail.com" title="Copies my email to your clipboard">🟢 Open to opportunities</a>
-      <a class="sb-item sb-hide-sm" href="assets/Bar-Ventura-Resume.pdf" download title="Download my resume (PDF)">⤓ resume.pdf</a>
+      <a class="sb-item sb-hide-sm" href="assets/Bar-Ventura-Resume.pdf" id="resumeLink" download title="Download my resume (PDF)">⤓ resume.pdf</a>
       <span class="sb-item sb-hide-sm">Ln 1, Col 1</span>
       <span class="sb-item sb-hide-sm">UTF-8</span>
       <span class="sb-item" id="sbLang">Markdown</span>
@@ -195,7 +205,7 @@
   <!-- ░░ Command palette ░░ -->
   <div class="palette-overlay" id="paletteOverlay" hidden>
     <div class="palette" role="dialog" aria-label="Command palette">
-      <input id="paletteInput" type="text" placeholder="Type to search files & commands…" autocomplete="off" spellcheck="false">
+      <input id="paletteInput" type="text" placeholder="Type to search files &amp; commands…" autocomplete="off" spellcheck="false">
       <ul class="palette-list" id="paletteList" role="listbox">
         <li role="option" data-open="readme"><span class="ficon ext-md">M</span>README.md <span class="pal-hint">about me</span></li>
         <li role="option" data-open="experience"><span class="ficon ext-yml">Y</span>experience.yaml <span class="pal-hint">work experience</span></li>
@@ -210,8 +220,11 @@
     </div>
   </div>
 
+  <!-- load order matters: content → render → editor → app → terminal -->
   <script src="js/content.js"></script>
   <script src="js/render.js"></script>
+  <script src="js/editor.js"></script>
   <script src="js/app.js"></script>
+  <script src="js/terminal.js"></script>
 </body>
 </html>

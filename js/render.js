@@ -88,7 +88,7 @@
           (role.note ? ' <span class="tok-comment"># ' + esc(role.note) + "</span>" : "")
       )
     );
-    e.push(line("yml-ind", kv("company", '<span class="tok-str">' + esc(role.company) + "</span>")));
+    if (role.company) e.push(line("yml-ind", kv("company", '<span class="tok-str">' + esc(role.company) + "</span>")));
     e.push(line("yml-ind", kv("period", '<span class="tok-str">' + esc(role.period) + "</span>")));
     e.push(line("yml-ind", '<span class="tok-key">highlights</span><span class="tok-punct">:</span>'));
     role.highlights.forEach((h) =>
@@ -106,7 +106,7 @@
         '<div class="ext-icon">' + p.icon + "</div>" +
         '<div class="ext-main">' +
         '<div class="ext-title">' + esc(p.pack) + ' <span class="ext-stars">⭐ 5.0</span></div>' +
-        '<div class="ext-pub">bar.ventura · ' + esc(p.pub) + "</div>" +
+        '<div class="ext-pub">' + esc(P.name.toLowerCase().replace(/\s+/g, ".")) + ' · ' + esc(p.pub) + "</div>" +
         '<div class="ext-pills">' +
         p.items.map((i) => '<span class="pill">' + esc(i) + "</span>").join("") +
         "</div></div>" +
@@ -129,7 +129,7 @@
   ed.push(line());
   P.education.forEach((d) => {
     ed.push(
-      line("md-li", '<span class="md-mark">- </span><b>' + esc(d.degree) + "</b> — " + esc(d.org))
+      line("md-li", '<span class="md-mark">- </span><b>' + esc(d.degree) + "</b>" + (d.org ? " — " + esc(d.org) : ""))
     );
     ed.push(line("md-sub", '<span class="md-dim">' + esc(d.period) + "</span>"));
   });
@@ -137,7 +137,12 @@
     ed.push(line());
     ed.push(line("md-h2", '<span class="md-mark">## </span>' + esc(P.highschool.title)));
     ed.push(line());
-    ed.push(line("md-quote", '<span class="md-mark">&gt; </span>' + esc(P.highschool.note)));
+    (Array.isArray(P.highschool.note) ? P.highschool.note : [P.highschool.note]).forEach((n, i) =>
+      ed.push(i === 0
+        ? line("md-quote", '<span class="md-mark">&gt; </span>' + md(n))
+        : line("md-li",    '<span class="md-mark">- </span>'    + md(n))
+      )
+    );
   }
   document.getElementById("education").innerHTML = '<div class="code">' + ed.join("") + "</div>";
 
@@ -203,7 +208,7 @@
   }
   const toastLink = document.querySelector(".toast-link");
   if (toastLink) toastLink.href = gmailUrl;
-  const abMail = document.querySelector('.activitybar a[href^="mailto:"]');
+  const abMail = document.getElementById("abMailBtn");
   if (abMail) {
     abMail.href = "mailto:" + P.email;
     abMail.title = "Contact me — copies " + P.email;
@@ -215,4 +220,53 @@
   }
   const palEmailHint = document.querySelector('#paletteList li[data-cmd="email"] .pal-hint');
   if (palEmailHint) palEmailHint.textContent = P.email;
+
+  const resumeLink = document.getElementById("resumeLink");
+  if (resumeLink && P.resumePdf) resumeLink.href = P.resumePdf;
+
+  const titlebarTitle = document.querySelector(".titlebar-title");
+  if (titlebarTitle && P.name) {
+    const slug = P.name.toLowerCase().replace(/\s+/g, "-");
+    titlebarTitle.textContent = "README.md — " + slug + " — portfolio";
+  }
+
+  /* ── meta tags (for browsers; crawlers need the static <head> values) ── */
+  document.title = P.name + " — " + P.title;
+
+  const setMeta = (sel, attr, val) => {
+    const el = document.querySelector(sel);
+    if (el && val) el.setAttribute(attr, val);
+  };
+  const desc = [P.name + " — " + P.title, P.summary?.[0]].filter(Boolean).join(". ");
+  setMeta('meta[name="description"]',        "content", desc);
+  setMeta('meta[property="og:title"]',       "content", P.name + " — " + P.title);
+  setMeta('meta[property="og:description"]', "content", desc);
+  setMeta('meta[name="twitter:title"]',      "content", P.name + " — " + P.title);
+  if (P.siteUrl) {
+    setMeta('link[rel="canonical"]',       "href",    P.siteUrl);
+    setMeta('meta[property="og:url"]',     "content", P.siteUrl);
+  }
+  if (P.ogImage) {
+    const img = (P.siteUrl && !P.ogImage.startsWith("http"))
+      ? P.siteUrl + P.ogImage
+      : P.ogImage;
+    setMeta('meta[property="og:image"]',   "content", img);
+    setMeta('meta[name="twitter:image"]',  "content", img);
+  }
+
+  /* ── JSON-LD structured data ─────────────────────────────── */
+  const ld = {
+    "@context": "https://schema.org",
+    "@type":    "Person",
+    name:       P.name,
+    jobTitle:   P.title,
+  };
+  if (P.email)        ld.email    = "mailto:" + P.email;
+  if (P.location)     ld.address  = { "@type": "PostalAddress", addressLocality: P.location };
+  if (P.education?.[0]) ld.alumniOf = P.education[0].org;
+  if (P.skills)       ld.knowsAbout = P.skills.flatMap((s) => s.items);
+  const ldScript = document.createElement("script");
+  ldScript.type = "application/ld+json";
+  ldScript.textContent = JSON.stringify(ld);
+  document.head.appendChild(ldScript);
 })();

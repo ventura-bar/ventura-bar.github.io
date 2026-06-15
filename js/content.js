@@ -30,7 +30,7 @@ window.PORTFOLIO = {
     "DevOps Team Leader and Full-Stack Developer. Experienced in managing complex",
     "multi-cluster architectures, automating pipelines, and leading cross-functional",
     "engineering teams in high-stakes environments. Combines deep technical expertise",
-    "with strong leadership fundamentals cultivated through military officer training",
+    "with strong leadership fundamentals cultivated through military training",
     "and instructional roles.",
   ],
 
@@ -50,7 +50,7 @@ window.PORTFOLIO = {
       company: "",
       period: "Jan 2024 → present",
       highlights: [
-        "Led a team of **12 developers, QA & DevOps engineers** managing an enterprise-grade, developer-facing SaaS platform (GitLab, Artifactory, Jira, QlikSense, Matomo)",
+        "Led a team of **12 developers, QA & DevOps engineers** managing an enterprise-grade, developer-facing SaaS platform (GitLab, Artifactory, Jira, Qlik Sense, Matomo)",
         "**Platform engineering & DevEx:** managed and optimized critical development infrastructure to streamline the organizational developer experience",
         "**AI & automation:** architected and deployed internal AI platforms and automation pipelines — significantly accelerating dev workflows and cutting manual operational overhead",
         "**Infrastructure scale:** orchestrated large-scale multi-cluster migrations, version upgrades and automated disaster-recovery strategies — absolute resilience, zero data loss",

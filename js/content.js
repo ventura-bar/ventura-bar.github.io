@@ -46,9 +46,21 @@ window.PORTFOLIO = {
   /* experience.yaml — newest first. `note` is an optional yaml comment. */
   experience: [
     {
+      title: "Cloud & AI Platform Engineer",
+      company: "",
+      period: "Jul 2026 → present",
+      highlights: [
+        "Architecting and building the organization's entire cloud infrastructure on **Google Cloud Platform** from the ground up — compute (Cloud Run, GKE), managed data (Cloud SQL, Memorystore, Firestore), object storage (Cloud Storage) and networking (VPC, Cloud Load Balancing), with full observability (Cloud Monitoring)",
+        "**AI platform ownership:** manage the org's AI development stack end-to-end — **Vertex AI** for model hosting/tuning and a self-deployed **LiteLLM** gateway unifying LLM access across teams",
+        "**Security & IAM:** design every service with a security-first posture — least-privilege IAM, centralized secrets via **Secret Manager**, and network segmentation across all managed services",
+        "**CI/CD:** built the deployment pipeline feeding GKE & Cloud Run via **Artifact Registry** and **Cloud Build**",
+        "**Migration & enablement:** lead application teams through migration onto the new GCP platform, from architecture review to cutover",
+      ],
+    },
+    {
       title: "DevOps Team Leader",
       company: "",
-      period: "Jan 2024 → present",
+      period: "Jan 2024 → Jul 2026",
       highlights: [
         "Led a team of **12 developers, QA & DevOps engineers** managing an enterprise-grade, developer-facing SaaS platform (GitLab, Artifactory, Jira, Qlik Sense, Matomo)",
         "**Platform engineering & DevEx:** managed and optimized critical development infrastructure to streamline the organizational developer experience",
@@ -89,11 +101,11 @@ window.PORTFOLIO = {
   /* Extensions: Skills — each pack is one card */
   skills: [
     { icon: "☸️", pack: "Cloud & Orchestration", pub: "production-grade since 2024",
-      items: ["Google Cloud Platform", "OpenShift", "Kubernetes", "Linux & Windows VMs"] },
+      items: ["Google Cloud Platform", "Cloud Run", "GKE", "Cloud SQL", "Memorystore", "Firestore", "Cloud Storage", "Cloud Monitoring", "VPC & Load Balancing", "Secret Manager", "OpenShift", "Kubernetes", "Linux & Windows VMs"] },
     { icon: "⚡", pack: "IaC & Automation", pub: "everything as code",
-      items: ["Terraform", "Ansible", "Helm", "ArgoCD", "GitLab CI/CD", "GitHub Actions"] },
+      items: ["Terraform", "Ansible", "Helm", "ArgoCD", "GitLab CI/CD", "GitHub Actions", "Artifact Registry", "Cloud Build"] },
     { icon: "🤖", pack: "AI Platforms", pub: "built & shipped internally",
-      items: ["RAG Architecture", "Data Pipelines", "Code Assistants"] },
+      items: ["Vertex AI", "LiteLLM", "RAG Architecture", "Data Pipelines", "Code Assistants"] },
     { icon: "🧰", pack: "Platform Tools — DevEx", pub: "admin level, served 100s of devs",
       items: ["GitLab", "Artifactory", "Jira", "Confluence", "QlikSense", "Matomo"] },
     { icon: "💬", pack: "Languages", pub: "from assembly to async",

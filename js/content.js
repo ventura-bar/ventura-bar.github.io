@@ -13,6 +13,9 @@ window.PORTFOLIO = {
   location: "Rehovot, Israel",
   status: "🟢 Open to opportunities",
   resumePdf: "assets/Bar-Ventura-Resume.pdf",
+  /* headshot shown on the clean (non-developer) site — remove the line to hide it */
+  photo: "assets/bar-ventura.jpg",
+
 
   /* your deployed URL — used for canonical & og:url meta tags */
   siteUrl: "https://ventura-bar.github.io/",

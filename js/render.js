@@ -14,6 +14,8 @@
       .replace(/"/g, "&quot;");
   /* minimal markdown: **text** → bold */
   const md = (s) => esc(s).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>");
+  /* shared with js/clean.js */
+  window.PortfolioUtil = { esc, md };
   const line = (cls, html) =>
     '<div class="line' + (cls ? " " + cls : "") + '">' + (html || "") + "</div>";
 

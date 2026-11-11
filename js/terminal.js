@@ -59,6 +59,7 @@
       print("  resume            download my resume (PDF)");
       print("  contact           copy my email to your clipboard");
       print("  sudo hire-me      you know you want to");
+      print("  exit-dev          leave Developer Mode (back to the clean site)");
       print("  clear             clear terminal");
       print("  exit              close terminal");
     },
@@ -86,6 +87,13 @@
     },
     exit() {
       toggleTerminal();
+    },
+    "exit-dev"() {
+      print("leaving Developer Mode ✓");
+      window.App.setMode?.("clean");
+    },
+    gui() {
+      COMMANDS["exit-dev"]();
     },
   };
 

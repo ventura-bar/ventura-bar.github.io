@@ -36,13 +36,44 @@
         var t = localStorage.getItem("theme");
         if (t) document.documentElement.setAttribute("data-theme", t);
       } catch (_) {}
+      /* clean site by default; Developer Mode = the VS Code experience */
+      var m = "clean";
+      try { if (localStorage.getItem("mode") === "dev") m = "dev"; } catch (_) {}
+      if (location.hash === "#dev") m = "dev";
+      document.documentElement.setAttribute("data-mode", m);
     })();
   </script>
 
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&family=Space+Grotesk:wght@500;700&display=swap">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/clean.css">
 </head>
 <body>
+
+  <!-- ░░ Mode switch — shared by both views, always top-centre ░░ -->
+  <button class="mode-toggle" id="modeToggle" type="button" role="switch" aria-checked="false"
+          aria-label="Developer Mode" title="Switch to Developer Mode — the VS Code experience">
+    <span class="mt-track" aria-hidden="true"><span class="mt-knob"></span></span>
+    <span class="mt-label" aria-hidden="true"><span class="mt-b">&lt;</span><span class="mt-full">&nbsp;Developer Mode&nbsp;</span><span class="mt-short">&nbsp;Dev&nbsp;</span><span class="mt-b">/&gt;</span></span>
+  </button>
+
+  <!-- ░░ Clean view (default) — rendered from js/content.js by js/clean.js ░░ -->
+  <div class="clean-app" id="cleanApp">
+    <noscript>
+      <div class="c-noscript">
+        <h1>Bar Ventura</h1>
+        <p>DevOps &amp; Full-Stack Engineer · Rehovot, Israel</p>
+        <p><a href="mailto:barven.dev@gmail.com">barven.dev@gmail.com</a> ·
+           <a href="assets/Bar-Ventura-Resume.pdf" download>Download my resume (PDF)</a></p>
+      </div>
+    </noscript>
+  </div>
+
+  <!-- ░░ Developer Mode — the VS Code experience ░░ -->
+  <div class="dev-app" id="devApp">
 
   <!-- ░░ Title bar ░░ -->
   <header class="titlebar">
@@ -181,6 +212,8 @@
     </div>
   </footer>
 
+  </div><!-- /.dev-app -->
+
   <!-- ░░ Notification toast ░░ -->
   <div class="toast" id="toast" hidden role="status">
     <span class="toast-icon">✓</span>
@@ -216,15 +249,18 @@
         <li role="option" data-cmd="email"><span class="ficon ext-cmd">&gt;</span>Contact: Copy Email Address <span class="pal-hint">barven.dev@gmail.com</span></li>
         <li role="option" data-cmd="theme"><span class="ficon ext-cmd">&gt;</span>Preferences: Color Theme <span class="pal-hint">4 themes</span></li>
         <li role="option" data-cmd="resume"><span class="ficon ext-cmd">&gt;</span>Download Resume <span class="pal-hint">PDF</span></li>
+        <li role="option" data-cmd="clean"><span class="ficon ext-cmd">&gt;</span>View: Exit Developer Mode <span class="pal-hint">clean site</span></li>
       </ul>
     </div>
   </div>
 
-  <!-- load order matters: content → render → editor → app → terminal -->
+  <!-- load order matters: content → render → editor → app → terminal → clean → mode -->
   <script src="js/content.js"></script>
   <script src="js/render.js"></script>
   <script src="js/editor.js"></script>
   <script src="js/app.js"></script>
   <script src="js/terminal.js"></script>
+  <script src="js/clean.js"></script>
+  <script src="js/mode.js"></script>
 </body>
 </html>

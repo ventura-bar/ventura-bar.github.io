@@ -137,6 +137,7 @@
     else if (li.dataset.cmd === "email")    copyEmail();
     else if (li.dataset.cmd === "theme")    toggleThemeMenu(true);
     else if (li.dataset.cmd === "resume")   downloadResume();
+    else if (li.dataset.cmd === "clean")    App.setMode?.("clean");
   }
 
   palInput.addEventListener("input", () => {

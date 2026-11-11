@@ -1,0 +1,39 @@
+css/clean.css
+  s_9ab1a8a8c81003::t_e5b61cd400d22b 144,440,453
+  s_9ab1a8a8c81003::t_5fba5dc70d2bbd 199,220,236,578,602
+  s_9ab1a8a8c81003::t_d12393fdbae710 421,652
+  s_9ab1a8a8c81003::t_3fd676f4341ab4 1-143,145-198,200-219,221-235,237-420,422-439,441-452,454-577,579-601,603-651,653-655
+js/content.js
+  s_9ab1a8a8c81003::t_f6f579649ed8d2 16-18
+js/clean.js
+  s_9ab1a8a8c81003::t_18477fe3b974b6 123
+  s_9ab1a8a8c81003::t_d12393fdbae710 172
+  s_9ab1a8a8c81003::t_953d8b2fc6fbf9 1-122,124-171,173-201
+index.html
+  s_9ab1a8a8c81003::t_f6f579649ed8d2 39-43,48-50,52,56-77,215-216,252,257,263-264
+js/app.js
+  s_9ab1a8a8c81003::t_f6f579649ed8d2 140
+js/mode.js
+  s_9ab1a8a8c81003::t_c9e26f1bad3b73 1-47,49-51,56-81,85,89,92-96
+  s_9ab1a8a8c81003::t_95499de01f3b5d 48,52-55,82-84,86-88,90-91
+js/terminal.js
+  s_9ab1a8a8c81003::t_f6f579649ed8d2 62,91-97
+js/render.js
+  s_9ab1a8a8c81003::t_f6f579649ed8d2 17-18
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "ee06a54339ba910ae079b012db3f397e7dbd2592",
+  "prompts": {},
+  "sessions": {
+    "s_9ab1a8a8c81003": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "39eb03b3-340e-4f0b-9592-d1ae18318512",
+        "model": "claude-fable-5-2"
+      },
+      "human_author": "Bar Ventura <bar090402@gmail.com>"
+    }
+  }
+}

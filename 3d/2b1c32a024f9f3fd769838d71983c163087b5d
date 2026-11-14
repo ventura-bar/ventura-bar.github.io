@@ -1,0 +1,19 @@
+index.html
+  s_9ab1a8a8c81003::t_0afb8a96b2e13c 50-53
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "3d2b1c32a024f9f3fd769838d71983c163087b5d",
+  "prompts": {},
+  "sessions": {
+    "s_9ab1a8a8c81003": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "39eb03b3-340e-4f0b-9592-d1ae18318512",
+        "model": "claude-fable-5-2"
+      },
+      "human_author": "Bar Ventura <bar090402@gmail.com>"
+    }
+  }
+}
